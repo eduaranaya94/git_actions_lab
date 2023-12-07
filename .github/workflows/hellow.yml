@@ -1,0 +1,14 @@
+name: hellow Actions
+
+on:
+    push: 
+        branches:
+            - master
+
+jobs:
+    hellow_action:
+        name: Display hellow in action
+        runs-on: ubuntu-latest
+        steps:
+          - name: print msg
+            run: echo "Helow, successfull print in Actions!"
