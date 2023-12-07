@@ -1,0 +1,19 @@
+name: StartProcess
+
+on: 
+    push: 
+        branches: 
+            - master
+
+jobs:
+    call_for_local_action:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Run Local Action
+            run: echo "Run Local Action"
+
+    call_for_shared_action:
+        uses: eduaranaya94/actions_base/.github/workflows/PrintMsg.yml@master
+        with:
+          msg: Action invoked from a remote action
+            
